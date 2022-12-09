@@ -22,8 +22,16 @@ class Prof {
 //         m.study()
 //     }
 // }
+// function toMentor (m:Mentor){
+//     if ( 'teach' in m  ){
+//         console.log('mentoring professor ')
+//         m.teach()
+//     }else {
+//         m.study()
+//     }
+// }
 function toMentor(m) {
-    if ('teach' in m) {
+    if (isProfessor(m)) {
         console.log('mentoring professor ');
         m.teach();
     }
@@ -31,6 +39,7 @@ function toMentor(m) {
         m.study();
     }
 }
+//user-defined guard
 function isProfessor(v) {
     return v instanceof Prof;
 }
